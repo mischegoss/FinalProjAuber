@@ -52,7 +52,7 @@ export default class App extends Component {
     firebase.firestore().settings({});
     
     // Initialize web service plugin 'firebase 1'
-    firebase.initializeApp({
+    /*firebase.initializeApp({
         apiKey: "AIzaSyD98BZnif_88GJQuy_cF67rBJHn_xianFs",
         authDomain: "texterimages.firebaseapp.com",
         databaseURL: "https://texterimages.firebaseio.com",
@@ -60,7 +60,7 @@ export default class App extends Component {
         storageBucket: "texterimages.appspot.com",
         messagingSenderId: "592534977480",
         appId: "1:592534977480:web:ee43d9435e5a242d"
-      };);
+      }); */
     firebase.firestore().settings({});
     
     this.serviceOptions_restaurants = {
@@ -309,8 +309,8 @@ export default class App extends Component {
         fetchComplete(err, options);
       });  
     
-    
-     /*
+    /*
+     
     dbLoadingPromise.get().then((querySnapshot) => {
         let jsonArr = [];
     
@@ -325,9 +325,11 @@ export default class App extends Component {
       (err) => {
         fetchComplete(err, options);
       });  
-      */
+      
     
   }
+
+  */
 
   render() {
     let makeElementForScreen = (screenId, baseProps, atTop, forward) => {

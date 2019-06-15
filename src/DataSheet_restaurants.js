@@ -14,7 +14,7 @@ export default class DataSheet_restaurants extends DataSheetBase {
     let item;
 
     // The contents of this data sheet will be loaded by plugin 'Firebase (Cloud Firestore)'.
-    
+    /*
     item = {};
     this.items.push(item);
     item['RestaurantPhone'] = "304-222-2000";
@@ -22,7 +22,7 @@ export default class DataSheet_restaurants extends DataSheetBase {
     item['RestaurantName'] = "Ally";
     item['RestaurantCoverImage'] = "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTv_UMRgudwqBC6ICoAiTnuUVPhTMzYR01KJeArx70D49O2LQlSX02cChv81IM9g_tBIkmTqrY5YHkY1gszpzTqYG4oGq49Xj-AN_zpv1DXgkdPtyy08nSPEQ&usqp=CAc";
     item.key = key++;
-    
+    */
     item = {};
     this.items.push(item);
     item['RestaurantPhone'] = "304-222-2000";
@@ -32,7 +32,10 @@ export default class DataSheet_restaurants extends DataSheetBase {
     item['RestaurantCoverImage'] = "https://cdn.shoplightspeed.com/shops/612125/files/5115671/650x750x2/image.jpg";
     item['RestaurantAddress'] = "123Main";
     item.key = key++;
+
+  
   }
+  
 
   
   // this function's implementation is provided by React Studio.
