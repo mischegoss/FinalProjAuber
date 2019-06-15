@@ -1,0 +1,2287 @@
+/* Font copied in place by React Studio. Please check that your license for this font file permits embedding on a website. */
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('fonts/Helvetica-Bold.ttf');
+}
+
+.font-helveticaBold {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+}
+@media (min-resolution: 120dpi) {
+  .font-helveticaBold {
+    font-family: 'Helvetica-Bold', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  }
+}
+
+/* Font copied in place by React Studio. Please check that your license for this font file permits embedding on a website. */
+@font-face {
+  font-family: 'AvenirNext-Regular';
+  src: url('fonts/AvenirNext-Regular.ttf');
+}
+
+.font-avenirNextRegular {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+}
+@media (min-resolution: 120dpi) {
+  .font-avenirNextRegular {
+    font-family: 'AvenirNext-Regular', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  }
+}
+
+.App { /* Base font style */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0, 0, 0, 0.8500);
+  background-color: #f6f6f6;
+}
+
+.App .baseFont * { /* Base font style override for UI framework components */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+}
+
+.App .appBg {
+  background-color: #f6f6f6;
+}
+
+.App .cardBg {
+  background-color: white;
+}
+
+.App .baseTextBg { /* Base text color as background */
+  background-color: rgba(0, 0, 0, 0.8500);
+}
+
+.App .secondaryTextColor {
+  color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .secondaryTextBg {
+  background-color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .primaryTextColor {
+  color: #212121;
+}
+
+.App .primaryBg {
+  background-color: #212121;
+}
+
+.App .highlightTextColor {
+  color: #424242;
+}
+
+.App .highlightBg {
+  background-color: #424242;
+}
+
+/* Styles to customize the UI framework plugin (MUI, https://muicss.com) */
+.mui-btn {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn--primary {
+    background-color: #212121;
+}
+.mui-btn--primary:active, .mui-btn--primary:focus, .mui-btn--primary:hover {
+    background-color: #373737;
+}
+.mui-btn--accent {
+    background-color: #424242;
+}
+.mui-btn--accent:active, .mui-btn--accent:focus, .mui-btn--accent:hover {
+    background-color: #555555;
+}
+.mui-textfield {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-checkbox, .mui-radio {  /* Reset UI framework styling that affects layout */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-select {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn+.mui-btn {  /* Reset UI framework styling that affects layout */
+    margin-left: 0;
+}
+.mui-btn--fab {  /* Reset UI framework styling that breaks compositing */
+    z-index: auto;
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes slideIn_right {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes slideIn_bottom {
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+/* App-wide text styles specified in React Studio */
+.App .actionFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 14.2px;
+  font-weight: 400;
+}
+.App .actionFont * {
+  font-size: 14.2px;
+}
+.App .headlineFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 19.4px;
+  font-weight: 400;
+}
+.App .headlineFont * {
+  font-size: 19.4px;
+}
+.App .navBar {
+  background-color: #212121;
+  color: #feffff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 63px;
+  min-height: 63px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 18px;
+}
+
+.App .navBar a {
+  color: #feffff;
+}
+
+.App .navBar .title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  margin-top: 13px;
+}
+
+.App .navBar .backBtn {
+  position: absolute;
+  padding: 4px;
+  margin-left: 14px;
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  .mui-container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 568px) {
+  .mui-container {
+    max-width: 568px;
+  }
+}
+@media (min-width: 768px) {
+  .mui-container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .mui-container {
+    max-width: 1024px;
+  }
+}
+
+.AppScreen {
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.App .background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.App .layoutFlow {
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+}
+.App .layoutFlow:before {  /* Prevent margin collapse */
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .layoutFlow .flowRow {
+  position: relative;
+  width: 100%;
+}
+
+.App .screenFgContainer {
+  /* Items in the foreground group within a screen are placed with fixed positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.App .foreground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.App ul {
+  margin: 0;
+  padding: 0;
+}
+.App li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+.App .hasNestedComps {
+  position: relative;
+}
+.App .hasNestedComps:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .hasNestedComps .background {
+  position: absolute;
+}
+.App .hasNestedComps .layoutFlow {
+  position: relative;
+}
+.App .bottomAlignedContent {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.App .blockInputOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: auto;
+  z-index: 99999999;
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .AddAUserScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .AddAUserScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .AddAUserScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .AddAUserScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+@media (min-width: 568px) {
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail {
+    position: relative;
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewerEmail > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .AddAUserScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 24px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+@media (min-width: 568px) {
+  .AddAUserScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 24px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .AddAUserScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 24px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .AddAUserScreen > .layoutFlow > .elReviewTitle {
+    position: relative;
+    margin-top: 24px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewTitle > * { 
+    width: 100%;
+  height: 34px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .AddAUserScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 181px;
+  }
+  
+@media (min-width: 568px) {
+  .AddAUserScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 181px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .AddAUserScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 22px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 180px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .AddAUserScreen > .layoutFlow > .elReviewText {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 22px);
+  }
+  .AddAUserScreen > .layoutFlow > .elReviewText > * { 
+    width: 100%;
+  height: 180px;
+  }
+  
+}
+
+.AddAUserScreen .elSendButton button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .AddAUserScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .AddAUserScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .AddAUserScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .AddAUserScreen > .layoutFlow > .elSendButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .AddAUserScreen > .layoutFlow > .elSendButton > * { 
+    width: 100%;
+  }
+  
+}
+
+.AddAUserScreen .elButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.AddAUserScreen .elButton:focus {
+  box-shadow: 0 0 6px rgba(254, 255, 255, 0.2500);
+  outline: none;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .AddAUserScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    width: 71px;
+    height: 35px;
+  }
+@media (min-width: 568px) {
+  .AddAUserScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    left: 11px;
+    top: 12px;
+    width: 71px;
+    height: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .AddAUserScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    left: 11px;
+    top: 13px;
+    width: 71px;
+    height: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .AddAUserScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 35px;
+    left: 11px;
+    top: 15px;
+    width: 71px;
+    height: 35px;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .SendTextScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .SendTextScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .SendTextScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .SendTextScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+.SendTextScreen .elButton2 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .SendTextScreen > .layoutFlow > .elButton2 {
+    line-height: 62px;
+    position: relative;
+    margin-top: 412px;
+    width: 159px;
+    margin-left: 56px;
+  }
+  .SendTextScreen > .layoutFlow > .elButton2 > * { 
+  width: 159px;
+  }
+  
+@media (min-width: 568px) {
+  .SendTextScreen > .layoutFlow > .elButton2 {
+    line-height: 62px;
+    position: relative;
+    margin-top: 412px;
+    width: 159px;
+    margin-left: 56px;
+  }
+  .SendTextScreen > .layoutFlow > .elButton2 > * { 
+  width: 159px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .SendTextScreen > .layoutFlow > .elButton2 {
+    line-height: 61px;
+    position: relative;
+    margin-top: 410px;
+    width: 158px;
+    margin-left: 56px;
+  }
+  .SendTextScreen > .layoutFlow > .elButton2 > * { 
+  width: 158px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .SendTextScreen > .layoutFlow > .elButton2 {
+    line-height: 61px;
+    position: relative;
+    margin-top: 410px;
+    width: 158px;
+    margin-left: 56px;
+  }
+  .SendTextScreen > .layoutFlow > .elButton2 > * { 
+  width: 158px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .SendTextScreen > .layoutFlow > .elCard {
+    position: relative;
+    margin-top: -314px;
+    width: 272px;
+    margin-left: 22px;
+  }
+  .SendTextScreen > .layoutFlow > .elCard > * { 
+  width: 272px;
+  height: 204px;
+  }
+  
+@media (min-width: 568px) {
+  .SendTextScreen > .layoutFlow > .elCard {
+    position: relative;
+    margin-top: -314px;
+    width: 272px;
+    margin-left: 22px;
+  }
+  .SendTextScreen > .layoutFlow > .elCard > * { 
+  width: 272px;
+  height: 204px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .SendTextScreen > .layoutFlow > .elCard {
+    position: relative;
+    margin-top: -312px;
+    width: 270px;
+    margin-left: 22px;
+  }
+  .SendTextScreen > .layoutFlow > .elCard > * { 
+  width: 270px;
+  height: 203px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .SendTextScreen > .layoutFlow > .elCard {
+    position: relative;
+    margin-top: -312px;
+    width: 270px;
+    margin-left: 22px;
+  }
+  .SendTextScreen > .layoutFlow > .elCard > * { 
+  width: 270px;
+  height: 203px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .SendTextScreen > .layoutFlow > .elText {
+    overflow: hidden;
+    position: relative;
+    margin-top: 216px;
+    width: 238px;
+    margin-left: 102px;
+  }
+  .SendTextScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+@media (min-width: 568px) {
+  .SendTextScreen > .layoutFlow > .elText {
+    overflow: hidden;
+    position: relative;
+    margin-top: 216px;
+    width: 238px;
+    margin-left: 102px;
+  }
+  .SendTextScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .SendTextScreen > .layoutFlow > .elText {
+    overflow: hidden;
+    position: relative;
+    margin-top: 214px;
+    width: 236px;
+    margin-left: 102px;
+  }
+  .SendTextScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .SendTextScreen > .layoutFlow > .elText {
+    overflow: hidden;
+    position: relative;
+    margin-top: 214px;
+    width: 236px;
+    margin-left: 102px;
+  }
+  .SendTextScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .UserItem {
+    min-height: 506px;
+    width: 100%; /* This component was designed using a width of 303px */
+    height: 100%;
+  }
+  .UserItem > .background > .containerMinHeight {
+    min-height: 506px;
+  }
+
+
+  .UserItem > .background > .elBackgroundShape {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .UserItem > .layoutFlow > .elImage {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .UserItem > .layoutFlow > .elImage > * { 
+    width: 100%;
+  height: 214px;
+  }
+  
+
+
+  .UserItem > .layoutFlow > .elRestaurantName {
+    overflow: hidden;
+    position: relative;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 11px;
+    width: calc(100.0% - 23px);
+  }
+  .UserItem > .layoutFlow > .elRestaurantName > * { 
+    width: 100%;
+  }
+  
+
+.UserItem .elButtonReviews button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .UserItem > .layoutFlow > .elButtonReviews {
+    line-height: 35px;
+    position: relative;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 15px;
+    width: calc(100.0% - 23px);
+  }
+  .UserItem > .layoutFlow > .elButtonReviews > * { 
+    width: 100%;
+  }
+  
+
+
+  .UserItem > .layoutFlow > .elRectangleSpacer {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .UserItem > .layoutFlow > .elRectangleSpacer > * { 
+    width: 100%;
+  height: 32px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .UserInfo {
+    min-height: 37px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 189px */
+    height: 100%;
+  }
+  .UserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+
+  .UserInfo > .foreground > .state0_elTextBlock {
+    overflow: hidden;
+    position: absolute;
+    left: 120px;
+    top: 8px;
+    width: 62px;
+    height: 22px;
+  }
+
+/* This component has a fixed-size layout */
+  .UserInfo {
+    min-height: 37px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 189px */
+    height: 100%;
+  }
+  .UserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+
+  .UserInfo > .foreground > .state1_elImage {
+    position: absolute;
+    left: 155px;
+    top: 7px;
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .UserInfo > .foreground > .state1_elTextBlock {
+    overflow: hidden;
+    position: absolute;
+    left: 79px;
+    top: 9px;
+    width: 68px;
+    height: 22px;
+  }
+
+
+/* Narrowest size for this element's responsive layout */
+  .UserScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .UserScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .UserScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .UserScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+  .UserScreen .elList:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .UserScreen .elList .gridItem {
+    float: left;
+    position: relative;
+  }
+
+@media (min-width: 1024px) {
+  .UserScreen .elList .gridItem {
+    width: calc(100% / 4 - 9.0px*(3/4));
+    overflow: hidden;
+  }
+
+  .UserScreen .elList .cols4_0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+    clear: left;
+  }
+  .UserScreen .elList .cols4_1 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .UserScreen .elList .cols4_2 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .UserScreen .elList .cols4_3 {
+    margin-bottom: 9.0px;
+  }
+  .UserScreen .elList .cols4_3:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 1023px) {
+  .UserScreen .elList .gridItem {
+    width: calc(100% / 4 - 9.0px*(3/4));
+    overflow: hidden;
+  }
+
+  .UserScreen .elList .cols4_0 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+    clear: left;
+  }
+  .UserScreen .elList .cols4_1 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .UserScreen .elList .cols4_2 {
+    margin-right: 9.0px;
+    margin-bottom: 9.0px;
+  }
+  .UserScreen .elList .cols4_3 {
+    margin-bottom: 9.0px;
+  }
+  .UserScreen .elList .cols4_3:after { }
+  .UserScreen .elList .cols4_3:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .UserScreen .elList .gridItem {
+    width: calc(100% / 2 - 9.1px*(1/2));
+    overflow: hidden;
+  }
+
+  .UserScreen .elList .cols4_0 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols4_1 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols4_2 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols4_3 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols2_0 {
+    margin-right: 9.1px;
+    margin-bottom: 9.1px;
+    clear: left;
+  }
+  .UserScreen .elList .cols2_1 {
+    margin-bottom: 9.1px;
+  }
+  .UserScreen .elList .cols4_3:after { }
+  .UserScreen .elList .cols4_3:after { }
+  .UserScreen .elList .cols2_1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@media (max-width: 567px) {
+  .UserScreen .elList .gridItem {
+    width: calc(100% / 1 - 0.0px*(0/1));
+    overflow: hidden;
+  }
+
+  .UserScreen .elList .cols4_0 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols4_1 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols4_2 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols4_3 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols2_0 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols2_1 { margin-right: 0; margin-bottom: 0; }
+  .UserScreen .elList .cols1_0 {
+    margin-bottom: 9.1px;
+  }
+  .UserScreen .elList .cols4_3:after { }
+  .UserScreen .elList .cols4_3:after { }
+  .UserScreen .elList .cols2_1:after { }
+  .UserScreen .elList .cols1_0:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .UserScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .UserScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .UserScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .UserScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .UserScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 75px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .UserScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .UserScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 75px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .UserScreen > .layoutFlow > .elList > * { 
+    width: 100%;
+  }
+  
+}
+
+.circularProgressIndicator {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.circularProgressIndicator-active {
+    animation: rotate 2s linear infinite;
+    display: inline;
+}
+.circularProgress-animatedPath {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    animation: circularProgress-dash 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+}
+@keyframes rotate{
+    100%{
+    transform: rotate(360deg);
+    }
+}
+@keyframes circularProgress-dash{
+    0%{
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35;
+    }
+    100%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124;
+    }
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .UserScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    position: absolute;
+    left: calc(50.0% + 0px - 24px);
+    top: 138px;
+    width: 48px;
+    height: 48px;
+  }
+@media (min-width: 568px) {
+  .UserScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    left: calc(50.0% + 0px - 24px);
+    top: 138px;
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .UserScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    left: calc(50.0% + 0px - 24px);
+    top: 137px;
+    width: 47px;
+    height: 47px;
+  }
+}
+@media (min-width: 1024px) {
+  .UserScreen > .screenFgContainer > .foreground > .elProgressIndicator {
+    left: calc(50.0% + 0px - 24px);
+    top: 137px;
+    width: 47px;
+    height: 47px;
+  }
+}
+
+@keyframes fadeIn_UserScreen_elCardBG {
+  0% { opacity: 0.0; }
+  44% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+.UserScreen > .screenFgContainer > .foreground > .elCardBG {
+  animation: 1.80s fadeIn_UserScreen_elCardBG;
+}
+
+/* Narrowest size for this element's responsive layout */
+  .UserScreen > .screenFgContainer > .foreground > .elCardBG {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 47px;
+    width: 100.0%;
+    height: 49px;
+  }
+@media (min-width: 568px) {
+  .UserScreen > .screenFgContainer > .foreground > .elCardBG {
+    left: 0px;
+    right: 0px;
+    top: 47px;
+    width: 100.0%;
+    height: 49px;
+  }
+}
+@media (min-width: 768px) {
+  .UserScreen > .screenFgContainer > .foreground > .elCardBG {
+    left: 0px;
+    right: 0px;
+    top: 46px;
+    width: 100.0%;
+    height: 49px;
+  }
+}
+@media (min-width: 1024px) {
+  .UserScreen > .screenFgContainer > .foreground > .elCardBG {
+    left: 0px;
+    right: 0px;
+    top: 62px;
+    width: 100.0%;
+    height: 49px;
+  }
+}
+
+@keyframes fadeIn_UserScreen_elTextNumberOfItems {
+  0% { opacity: 0.0; }
+  29% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+.UserScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+  animation: 1.40s fadeIn_UserScreen_elTextNumberOfItems;
+}
+
+/* Narrowest size for this element's responsive layout */
+  .UserScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    position: fixed;
+    right: 69px;
+    top: 62px;
+    width: 227px;
+    height: 22px;
+  }
+@media (min-width: 568px) {
+  .UserScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    right: 69px;
+    top: 62px;
+    width: 227px;
+    height: 22px;
+  }
+}
+@media (min-width: 768px) {
+  .UserScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    right: 69px;
+    top: 62px;
+    width: 225px;
+    height: 22px;
+  }
+}
+@media (min-width: 1024px) {
+  .UserScreen > .screenFgContainer > .foreground > .elTextNumberOfItems {
+    right: 69px;
+    top: 76px;
+    width: 225px;
+    height: 22px;
+  }
+}
+
+@keyframes fadeIn_UserScreen_elPickerNumberOfRows {
+  0% { opacity: 0.0; }
+  29% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+.UserScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+  animation: 1.40s fadeIn_UserScreen_elPickerNumberOfRows;
+}
+
+/* Narrowest size for this element's responsive layout */
+  .UserScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    position: fixed;
+    right: 7px;
+    top: 56px;
+    width: 53px;
+    height: 30px;
+  }
+@media (min-width: 568px) {
+  .UserScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    right: 7px;
+    top: 56px;
+    width: 53px;
+    height: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .UserScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    right: 7px;
+    top: 56px;
+    width: 53px;
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .UserScreen > .screenFgContainer > .foreground > .elPickerNumberOfRows {
+    right: 7px;
+    top: 69px;
+    width: 53px;
+    height: 30px;
+  }
+}
+
+.UserScreen .elUserInfo {
+  overflow: hidden;
+}
+
+.UserScreen .elUserInfo.hasNestedComps > div {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo {
+    position: fixed;
+    right: 0px;
+    top: 7px;
+    width: 185px;
+    height: 42px;
+  }
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+@media (min-width: 568px) {
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo {
+    right: 0px;
+    top: 7px;
+    width: 185px;
+    height: 42px;
+  }
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+}
+@media (min-width: 768px) {
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo {
+    right: 0px;
+    top: 7px;
+    width: 184px;
+    height: 41px;
+  }
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 36px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo {
+    right: 0px;
+    top: 7px;
+    width: 184px;
+    height: 41px;
+  }
+  .UserScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 36px;
+  }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .background > .elBackground {
+    position: absolute;
+    left: 5px;
+    right: -5px;
+    top: 6px;
+    width: calc(100.0% - 5px - -5px);
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .LoginMainScreen > .background > .elBackground {
+    left: 5px;
+    right: -5px;
+    top: 6px;
+    width: calc(100.0% - 5px - -5px);
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .background > .elBackground {
+    left: 5px;
+    right: -5px;
+    top: 6px;
+    width: calc(100.0% - 5px - -5px);
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .background > .elBackground {
+    left: 5px;
+    right: -5px;
+    top: 6px;
+    width: calc(100.0% - 5px - -5px);
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .background > .elN00021restaurant {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .LoginMainScreen > .background > .elN00021restaurant {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .background > .elN00021restaurant {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .background > .elN00021restaurant {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 72px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 108px;
+  }
+  
+@media (min-width: 568px) {
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 76px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 108px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 75px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 108px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 75px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elFirebaseLogin > * { 
+    width: 100%;
+  height: 108px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: -5px;
+    margin-right: 5px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: -5px;
+    margin-right: 5px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: -5px;
+    margin-right: 5px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginMainScreen > .layoutFlow > .elText2 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: -5px;
+    margin-right: 5px;
+    width: calc(100.0% - 0px);
+  }
+  .LoginMainScreen > .layoutFlow > .elText2 > * { 
+    width: 100%;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .NoSelectedRestaurant {
+    min-height: 148px;
+    min-width: 380px;
+     /* This component has a fixed size */
+  }
+  .NoSelectedRestaurant > .background > .containerMinHeight {
+    min-height: 148px;
+  }
+
+
+  .NoSelectedRestaurant > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .NoSelectedRestaurant > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 59px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .NoSelectedRestaurant > .layoutFlow > .elText > * { 
+    width: 100%;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .ListItemRestaurantsListDetails {
+    min-height: 152px;
+    width: 100%; /* This component was designed using a width of 237px */
+    height: 100%;
+  }
+  .ListItemRestaurantsListDetails > .background > .containerMinHeight {
+    min-height: 152px;
+  }
+
+
+  .ListItemRestaurantsListDetails > .background > .state0_elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elText282255 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elText282255 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elTextCopy152426 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elTextCopy152426 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elTextCopy3785607 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elTextCopy3785607 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .flowRow > .state0_elTextCopy2917188 {
+    position: absolute;
+    margin-top: 12px;
+    width: 131px;
+    margin-left: 5.3%;
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .flowRow > .state0_elTextCopy2917188 > * { 
+  width: 131px;
+  }
+  
+  .flowRow_ListItemRestaurantsListDetails_state0_elTextCopy2917188_917188 { 
+  }
+  
+
+.ListItemRestaurantsListDetails .state0_elButton450243 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elButton450243 {
+    line-height: 31px;
+    position: relative;
+    margin-top: 6px;
+    width: 98px;
+    margin-left: 57.9%;
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elButton450243 > * { 
+  width: 98px;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elLine868599 {
+    position: relative;
+    margin-top: 7px;
+    margin-left: 6px;
+    margin-right: 0px;
+    width: calc(100.0% - 6px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state0_elLine868599 > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .ListItemRestaurantsListDetails {
+    min-height: 152px;
+    width: 100%; /* This component was designed using a width of 237px */
+    height: 100%;
+  }
+  .ListItemRestaurantsListDetails > .background > .containerMinHeight {
+    min-height: 152px;
+  }
+
+
+  .ListItemRestaurantsListDetails > .background > .state1_elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elText282255 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elText282255 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elTextCopy152426 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elTextCopy152426 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elTextCopy3785607 {
+    position: relative;
+    margin-top: 14px;
+    margin-left: 5.3%;
+    margin-right: 0px;
+    width: calc(94.7% - 0px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elTextCopy3785607 > * { 
+    width: 100%;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .flowRow > .state1_elTextCopy2917188 {
+    position: absolute;
+    margin-top: 12px;
+    width: 131px;
+    margin-left: 5.3%;
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .flowRow > .state1_elTextCopy2917188 > * { 
+  width: 131px;
+  }
+  
+  .flowRow_ListItemRestaurantsListDetails_state1_elTextCopy2917188_917188 { 
+  }
+  
+
+.ListItemRestaurantsListDetails .state1_elButton450243 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elButton450243 {
+    line-height: 31px;
+    position: relative;
+    margin-top: 6px;
+    width: 98px;
+    margin-left: 57.9%;
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elButton450243 > * { 
+  width: 98px;
+  }
+  
+
+
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elLine868599 {
+    position: relative;
+    margin-top: 7px;
+    margin-left: 6px;
+    margin-right: 0px;
+    width: calc(100.0% - 6px);
+  }
+  .ListItemRestaurantsListDetails > .layoutFlow > .state1_elLine868599 > * { 
+    width: 100%;
+  height: 2px;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .Dashboard {
+    min-height: 306px;
+    width: 100%; /* This component was designed using a width of 420px */
+    height: 100%;
+  }
+  .Dashboard > .background > .containerMinHeight {
+    min-height: 306px;
+  }
+
+
+  .Dashboard > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+  .Dashboard .elList li {
+    margin-bottom: 5px;
+  }
+
+
+
+  .Dashboard > .layoutFlow > .elList {
+    position: relative;
+    margin-top: -4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .Dashboard > .layoutFlow > .elList > * { 
+    width: 100%;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .ReviewsComp {
+    min-height: 229px;
+    width: 100%; /* This component was designed using a width of 428px */
+    height: 100%;
+  }
+  .ReviewsComp > .background > .containerMinHeight {
+    min-height: 229px;
+  }
+
+
+  .ReviewsComp > .layoutFlow > .elList {
+    position: relative;
+    margin-top: -2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .ReviewsComp > .layoutFlow > .elList > * { 
+    width: 100%;
+  }
+  
+
+/* This component has a fixed-size layout */
+  .StarOff {
+    min-height: 46px;
+    overflow: hidden;
+    min-width: 46px;
+     /* This component has a fixed size */
+  }
+  .StarOff > .background > .containerMinHeight {
+    min-height: 46px;
+  }
+
+.StarOff .elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.StarOff .elIconButton:focus {
+  box-shadow: 0 0 6px rgba(66, 66, 66, 0.2500);
+  outline: none;
+}
+
+
+
+  .StarOff > .foreground > .elIconButton {
+    line-height: 46px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+/* This component has a fixed-size layout */
+  .StarOn {
+    min-height: 46px;
+    overflow: hidden;
+    min-width: 46px;
+     /* This component has a fixed size */
+  }
+  .StarOn > .background > .containerMinHeight {
+    min-height: 46px;
+  }
+
+.StarOn .elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.StarOn .elIconButton:focus {
+  box-shadow: 0 0 6px rgba(66, 66, 66, 0.2500);
+  outline: none;
+}
+
+
+
+  .StarOn > .foreground > .elIconButton {
+    line-height: 46px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+
+
+/* Narrowest size for this element's responsive layout */
+  .FinalProjectScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .FinalProjectScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .FinalProjectScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .FinalProjectScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .FinalProjectScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 91px;
+    width: 238px;
+    margin-left: 12px;
+  }
+  .FinalProjectScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+@media (min-width: 568px) {
+  .FinalProjectScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 91px;
+    width: 238px;
+    margin-left: 12px;
+  }
+  .FinalProjectScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .FinalProjectScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 90px;
+    width: 236px;
+    margin-left: 12px;
+  }
+  .FinalProjectScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .FinalProjectScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 90px;
+    width: 236px;
+    margin-left: 12px;
+  }
+  .FinalProjectScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
+}
+
+  .FinalProjectScreen .elColumns > div {
+    display: flex;
+    flex-direction: row;
+    height: auto;  /* This element is in scroll flow */
+    flex-wrap: wrap;
+  }
+
+  .FinalProjectScreen .elColumns .col0 {
+    flex: 50.0;  /* Base weight for this column */
+    position: relative;
+  }
+
+@media (min-width: 1024px) {
+  .FinalProjectScreen .elColumns .col0 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+  }
+
+}
+
+@media (max-width: 1023px) {
+  .FinalProjectScreen .elColumns .col0 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+  }
+
+}
+
+@media (max-width: 767px) {
+  .FinalProjectScreen .elColumns .col0 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+  }
+
+}
+
+@media (max-width: 567px) {
+  .FinalProjectScreen .elColumns .col0 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 567px;
+  }
+
+}
+
+  .FinalProjectScreen .elColumns .col1 {
+    flex: 50.0;  /* Base weight for this column */
+    position: relative;
+  }
+
+@media (min-width: 1024px) {
+  .FinalProjectScreen .elColumns .col1 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+  }
+
+}
+
+@media (max-width: 1023px) {
+  .FinalProjectScreen .elColumns .col1 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+  }
+
+}
+
+@media (max-width: 767px) {
+  .FinalProjectScreen .elColumns .col1 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 0;  /* Ignore content size so that column widths will determine size */
+  }
+
+}
+
+@media (max-width: 567px) {
+  .FinalProjectScreen .elColumns .col1 {
+    flex: 50.0;  /* Column width for this screen format */
+    flex-basis: 567px;
+  }
+
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .FinalProjectScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .FinalProjectScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  }
+  
+@media (min-width: 568px) {
+  .FinalProjectScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .FinalProjectScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .FinalProjectScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .FinalProjectScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .FinalProjectScreen > .layoutFlow > .elColumns {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100.0% - 0px);
+  }
+  .FinalProjectScreen > .layoutFlow > .elColumns > * { 
+    width: 100%;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .Comp1 {
+    min-height: 37px;
+    min-width: 145px;
+     /* This component has a fixed size */
+  }
+  .Comp1 > .background > .containerMinHeight {
+    min-height: 37px;
+  }
+
+.Comp1 .elButton2 button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .Comp1 > .layoutFlow > .elButton2 {
+    line-height: 35px;
+    position: relative;
+    margin-top: 0px;
+    width: 145px;
+    margin-left: 0px;
+  }
+  .Comp1 > .layoutFlow > .elButton2 > * { 
+  width: 145px;
+  }
+  
+
